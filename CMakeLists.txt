@@ -112,9 +112,7 @@ include(CPack)
 enable_testing()
 
 add_test(version_test_case ${CMAKE_PROJECT_NAME})
-add_test(has_Begin_End_test_case ${CMAKE_PROJECT_NAME})
-add_test(conteiner_print_test_case ${CMAKE_PROJECT_NAME})
-add_test(integral_print_test_casee ${CMAKE_PROJECT_NAME})
-add_test(string_print_test_casee ${CMAKE_PROJECT_NAME})
+add_test(matrix_test_case ${CMAKE_PROJECT_NAME})
+
 
 
