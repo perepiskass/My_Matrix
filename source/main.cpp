@@ -44,11 +44,7 @@ int main(int argc, char *argv[])
     }
 
     const Matrix<int,1> matrix3;
-    for(int i=0;i<=n;++i)
-    {
-        matrix3[i][i] = i;
-        matrix3[i][n-i] = n-i;
-    }
+    // matrix3[2][3] = 99;  - ошибка компиляции
 
     printMatrix(matrix2);
     printMatrix(matrix3);
