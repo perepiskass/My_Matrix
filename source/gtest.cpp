@@ -27,10 +27,10 @@ TEST(matrix_test_case, add_element_test)
     matrix[1][0] = 2;
     matrix[1][1] = 3;
 
-    EXPECT_EQ(matrix.Get(0,0),0);
-    EXPECT_EQ(matrix.Get(0,1),1);
-    EXPECT_EQ(matrix.Get(1,0),2);
-    EXPECT_EQ(matrix.Get(1,1),3);
+    EXPECT_EQ(matrix[0][0],0);
+    EXPECT_EQ(matrix[0][1],1);
+    EXPECT_EQ(matrix[1][0],2);
+    EXPECT_EQ(matrix[1][1],3);
 }
 
 TEST(matrix_test_case, size_matrix_test)
@@ -54,7 +54,7 @@ TEST(matrix_test_case, operator_assign_test)
     (matrix[0][1] = defaultValues) = 4;
     matrix[1][0] = defaultValues;
 
-    EXPECT_EQ(matrix.Get(0,1),4);
+    EXPECT_EQ(matrix[0][1],4);
     EXPECT_EQ(matrix.size(),2);
 }
 

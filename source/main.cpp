@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     std::cout << "Matrix size = " << size << std::endl;
 
     int x,y,v;
-    for(auto c: matrix1)
+    for(const auto& c: matrix1)
     {
       std::tie(x, y, v) = c;
       std::cout << "["<< x << "][" << y << "] = " << v << std::endl;
@@ -43,7 +43,16 @@ int main(int argc, char *argv[])
         matrix2[i][n-i] = n-i;
     }
 
+    const Matrix<int,1> matrix3;
+    for(int i=0;i<=n;++i)
+    {
+        matrix3[i][i] = i;
+        matrix3[i][n-i] = n-i;
+    }
+
     printMatrix(matrix2);
+    printMatrix(matrix3);
+
   }
   
   catch(const std::exception& e)

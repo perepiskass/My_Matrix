@@ -30,16 +30,16 @@ class Matrix
 
     }
 
-    T Get(size_t x,size_t y)
-    {
-        key key(x,y);
-        auto it = map_matrix.find(key);
-        if(it != map_matrix.end())
-        {
-            return map_matrix.at(key);
-        }
-        return defValues;
-    }
+    // T Get(size_t x,size_t y) const
+    // {
+    //     key key(x,y);
+    //     auto it = map_matrix.find(key);
+    //     if(it != map_matrix.end())
+    //     {
+    //         return map_matrix.at(key);
+    //     }
+    //     return defValues;
+    // }
 
 /**
  * @brief Внутренний (Proxy class) класс для предоставления временных объектов при вызове операции [] у объекта класса Matrix.
@@ -51,74 +51,101 @@ class Matrix
         {
 
         }
+        Proxy(const Proxy&) = delete;
+        Proxy& operator =(const Proxy&) = delete;        
+        Proxy(Proxy&&) = delete;
+        Proxy& operator =(Proxy&&) = delete;
 
-        Proxy(Matrix &matr, size_t index):matrixRef(matr)
+        // Proxy(Matrix* matr, size_t index):matrixRef(matr)
+        // {
+        //     _key.first=index;
+        // }
+
+        Proxy(const Matrix* matr, size_t index)//:matirixRef(matr)
         {
+            matrixRef = const_cast<Matrix*>(matr);
+            // matr->size();
+            // matrixRef = nullptr;
             _key.first=index;
         }
 
-        Proxy & operator[] (int index)
+        auto& operator[] (int index) 
         {                        
             _key.second=index;
             return *this;
         }
 
+        operator T() const
+        {
+            // if(!matrixRef) return defValues;
+            auto it = matrixRef->map_matrix.find(_key);
+            if(it != matrixRef->map_matrix.end())
+            {
+                return matrixRef->map_matrix.at(_key);
+            }
+            return defValues;
+        }
+
         template<typename Z>
         Proxy& operator=(Z&& value) 
         {
+            //if(matrixRef==nullptr) return *this;
             auto Temp = std::forward<Z>(value);
 
             if(Temp != defValues) 
             {
-                matrixRef.map_matrix[_key] = Temp;
+                matrixRef->map_matrix[_key] = Temp;
                 return *this;
             } 
             else 
             {                
-                auto it = matrixRef.map_matrix.find(_key);
-                if(it != matrixRef.map_matrix.end())
+                auto it = matrixRef->map_matrix.find(_key);
+                if(it != matrixRef->map_matrix.end())
                 {
-                    matrixRef.map_matrix.erase(it);
+                    matrixRef->map_matrix.erase(it);
                 }
                 return *this;
             }
         }
 
-        Proxy& operator = (const Proxy& prx)
-        {
-            this->matrixRef = prx.matrixRef;
-            this->_key = prx._key;
-            return *this;
-        }
+        // Proxy& operator = (const Proxy& prx) const
+        // {
+        //     this->matrixRef = prx.matrixRef;
+        //     this->_key = prx._key;
+        //     return *this;
+        // }
 
        friend std::ostream& operator<< (std::ostream &out, const Proxy &prx)
         {
-            if (prx.matrixRef.getMap().find(prx._key) != prx.matrixRef.getMap().end())
-            {
-                auto tmp = prx.matrixRef.getMap().at(prx._key);
-                out << tmp;
-            }
-            else out << defValues;
+            // if (prx.matrixRef->getMap().find(prx._key) != prx.matrixRef->getMap().end())
+            // {
+            //     auto tmp = prx.matrixRef->getMap().at(prx._key);
+            //     out << tmp;
+            // }
+            // else out << defValues;
+
+            out << prx.operator T();
  
             return out;
         }
                 
         private:
         key _key;
-        Matrix&  matrixRef;        
+        Matrix*  matrixRef;
     };
+   // private:
+        // const matrix_map& getMap() const
+        // {
+        //     return map_matrix;
+        // }
+   // public:
 
-        const matrix_map& getMap()
+        auto operator[](size_t index) const
         {
-            return map_matrix;
+            return Proxy(this, index);
         }
 
-        auto operator[](size_t index) 
-        {
-            return Proxy(*this, index);
-        }
-
-    int size()
+    int size() const
     {
         return map_matrix.size();
     }
@@ -175,6 +202,16 @@ class Matrix
     {
         return MyIterator (map_matrix.end());
     }
+    
+     auto cbegin() const
+    {
+        return MyIterator (map_matrix.cbegin());
+    }
+
+    auto cend() const
+    {
+        return MyIterator (map_matrix.cend());
+    }
 
 
     private:
@@ -188,7 +225,7 @@ class Matrix
  * @tparam defValues - значение элемента матрцы по умолчанию (для разряженной области)
  */
 template<typename T, T defValues>
-void printMatrix(Matrix<T,defValues>& matrix)
+void printMatrix(const Matrix<T,defValues>& matrix)
 {
     std::cout << "Matrix size: " << matrix.size() << std::endl;
 
@@ -200,7 +237,7 @@ void printMatrix(Matrix<T,defValues>& matrix)
     }
 
     int x,y,v;
-    for(auto c: matrix)
+    for(const auto& c: matrix)
     {
         std::tie(x, y, v) = c;
         std::cout << "["<< x << "][" << y << "] = " << v << std::endl;
