@@ -3,7 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>My_Matrix: Файл include/matrix.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -11,9 +12,6 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { init_search(); });
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -31,39 +29,19 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.8.11 -->
+<!-- Создано системой Doxygen 1.8.13 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </script>
-  <div id="navrow1" class="tabs">
-    <ul class="tablist">
-      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="annotated.html"><span>Классы</span></a></li>
-      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
-      <li>
-        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div id="navrow2" class="tabs2">
-    <ul class="tablist">
-      <li><a href="files.html"><span>Файлы</span></a></li>
-      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
-    </ul>
-  </div>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -108,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="center"><img src="matrix_8h__dep__incl.png" border="0" usemap="#include_2matrix_8hdep" alt=""/></div>
 <map name="include_2matrix_8hdep" id="include_2matrix_8hdep">
 <area shape="rect" id="node2" href="gtest_8cpp.html" title="source/gtest.cpp" alt="" coords="5,80,135,107"/>
-<area shape="rect" id="node3" href="main_8cpp.html" title="source/main.cpp" alt="" coords="159,80,287,107"/>
+<area shape="rect" id="node3" href="main_8cpp.html" title="source/main.cpp" alt="" coords="159,80,288,107"/>
 </map>
 </div>
 </div>
@@ -128,13 +106,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:ab32e400eefcb4bce4d19cb810c8dc774"><td class="memTemplParams" colspan="2">template&lt;typename T , T defValues&gt; </td></tr>
-<tr class="memitem:ab32e400eefcb4bce4d19cb810c8dc774"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="matrix_8h.html#ab32e400eefcb4bce4d19cb810c8dc774">printMatrix</a> (<a class="el" href="classMatrix.html">Matrix</a>&lt; T, defValues &gt; &amp;matrix)</td></tr>
-<tr class="memdesc:ab32e400eefcb4bce4d19cb810c8dc774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная функция печати для класса <a class="el" href="classMatrix.html" title="Шаблон класса для создания двумерной бесконечной разраяженной матрицы. ">Matrix</a>.  <a href="#ab32e400eefcb4bce4d19cb810c8dc774">Подробнее...</a><br /></td></tr>
-<tr class="separator:ab32e400eefcb4bce4d19cb810c8dc774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0cea6848b91411e0a293a83a6422485"><td class="memTemplParams" colspan="2">template&lt;typename T , T defValues&gt; </td></tr>
+<tr class="memitem:af0cea6848b91411e0a293a83a6422485"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="matrix_8h.html#af0cea6848b91411e0a293a83a6422485">printMatrix</a> (const <a class="el" href="classMatrix.html">Matrix</a>&lt; T, defValues &gt; &amp;matrix)</td></tr>
+<tr class="memdesc:af0cea6848b91411e0a293a83a6422485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шаблонная функция печати для класса <a class="el" href="classMatrix.html" title="Шаблон класса для создания двумерной бесконечной разраяженной матрицы. ">Matrix</a>.  <a href="#af0cea6848b91411e0a293a83a6422485">Подробнее...</a><br /></td></tr>
+<tr class="separator:af0cea6848b91411e0a293a83a6422485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Функции</h2>
-<a class="anchor" id="ab32e400eefcb4bce4d19cb810c8dc774"></a>
+<a id="af0cea6848b91411e0a293a83a6422485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0cea6848b91411e0a293a83a6422485">&#9670;&nbsp;</a></span>printMatrix()</h2>
+
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -143,7 +123,7 @@ template&lt;typename T , T defValues&gt; </div>
         <tr>
           <td class="memname">void printMatrix </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classMatrix.html">Matrix</a>&lt; T, defValues &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classMatrix.html">Matrix</a>&lt; T, defValues &gt; &amp;&#160;</td>
           <td class="paramname"><em>matrix</em></td><td>)</td>
           <td></td>
         </tr>
@@ -158,26 +138,22 @@ template&lt;typename T , T defValues&gt; </div>
   </table>
   </dd>
 </dl>
-
-<p><div class="dynheader">
+<div class="dynheader">
 Граф вызовов:</div>
 <div class="dyncontent">
-<div class="center"><img src="matrix_8h_ab32e400eefcb4bce4d19cb810c8dc774_cgraph.png" border="0" usemap="#matrix_8h_ab32e400eefcb4bce4d19cb810c8dc774_cgraph" alt=""/></div>
-<map name="matrix_8h_ab32e400eefcb4bce4d19cb810c8dc774_cgraph" id="matrix_8h_ab32e400eefcb4bce4d19cb810c8dc774_cgraph">
-<area shape="rect" id="node2" href="classMatrix.html#a332ba6e28bc0eb2b04691c38af553191" title="Matrix::size" alt="" coords="144,5,239,32"/>
+<div class="center"><img src="matrix_8h_af0cea6848b91411e0a293a83a6422485_cgraph.png" border="0" usemap="#matrix_8h_af0cea6848b91411e0a293a83a6422485_cgraph" alt=""/></div>
+<map name="matrix_8h_af0cea6848b91411e0a293a83a6422485_cgraph" id="matrix_8h_af0cea6848b91411e0a293a83a6422485_cgraph">
+<area shape="rect" id="node2" href="classMatrix.html#a47d5be316cd3f2f381dcd9effeb7ad3c" title="Matrix::size" alt="" coords="147,5,244,32"/>
 </map>
 </div>
-</p>
-
-<p><div class="dynheader">
+<div class="dynheader">
 Граф вызова функции:</div>
 <div class="dyncontent">
-<div class="center"><img src="matrix_8h_ab32e400eefcb4bce4d19cb810c8dc774_icgraph.png" border="0" usemap="#matrix_8h_ab32e400eefcb4bce4d19cb810c8dc774_icgraph" alt=""/></div>
-<map name="matrix_8h_ab32e400eefcb4bce4d19cb810c8dc774_icgraph" id="matrix_8h_ab32e400eefcb4bce4d19cb810c8dc774_icgraph">
-<area shape="rect" id="node2" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="144,5,199,32"/>
+<div class="center"><img src="matrix_8h_af0cea6848b91411e0a293a83a6422485_icgraph.png" border="0" usemap="#matrix_8h_af0cea6848b91411e0a293a83a6422485_icgraph" alt=""/></div>
+<map name="matrix_8h_af0cea6848b91411e0a293a83a6422485_icgraph" id="matrix_8h_af0cea6848b91411e0a293a83a6422485_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="147,5,201,32"/>
 </map>
 </div>
-</p>
 
 </div>
 </div>
@@ -186,7 +162,7 @@ template&lt;typename T , T defValues&gt; </div>
 <hr class="footer"/><address class="footer"><small>
 Создано системой &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.11
+</a> 1.8.13
 </small></address>
 </body>
 </html>

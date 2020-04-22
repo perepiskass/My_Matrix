@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['operator_21_3d',['operator!=',['../classMatrix_1_1MyIterator.html#ab1a8e2e647063b47692b0e4122515ce1',1,'Matrix::MyIterator']]],
-  ['operator_2a',['operator*',['../classMatrix_1_1MyIterator.html#a5ee6d6784da752cde9d17b3506dc4d44',1,'Matrix::MyIterator']]],
-  ['operator_2b_2b',['operator++',['../classMatrix_1_1MyIterator.html#a76a7ca8d5d27a377f0f273464f39ba03',1,'Matrix::MyIterator']]],
-  ['operator_3c_3c',['operator&lt;&lt;',['../classMatrix_1_1Proxy.html#a818ef1c8a03b2477512b3194968e2f2c',1,'Matrix::Proxy']]],
-  ['operator_3d',['operator=',['../classMatrix_1_1Proxy.html#aaac8c4648acfaf2e9ad61328455e3688',1,'Matrix::Proxy::operator=(Z &amp;&amp;value)'],['../classMatrix_1_1Proxy.html#a40cd73be07b52bb7042459422dca2d2e',1,'Matrix::Proxy::operator=(const Proxy &amp;prx)']]],
-  ['operator_3d_3d',['operator==',['../classMatrix_1_1MyIterator.html#a0f22f24b5559e0de094d463f6a8c902d',1,'Matrix::MyIterator']]],
-  ['operator_5b_5d',['operator[]',['../classMatrix_1_1Proxy.html#a6c624ac9e27427bc6901bbae8f07e7a7',1,'Matrix::Proxy::operator[]()'],['../classMatrix.html#a38e5905d67c3b6fce252c46b787316f2',1,'Matrix::operator[]()']]]
+  ['main',['main',['../gtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;gtest.cpp'],['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp']]],
+  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['matrix',['Matrix',['../classMatrix.html',1,'Matrix&lt; T, defValues &gt;'],['../classMatrix.html#a36a96a378cb7ce7386949380d7dec78b',1,'Matrix::Matrix()']]],
+  ['matrix_2eh',['matrix.h',['../matrix_8h.html',1,'']]],
+  ['myiterator',['MyIterator',['../classMatrix_1_1MyIterator.html',1,'Matrix&lt; T, defValues &gt;::MyIterator'],['../classMatrix_1_1MyIterator.html#ac09bbb2e9a09ac1e8b6d0052fe111a2b',1,'Matrix::MyIterator::MyIterator(const iterMap &amp;ptr)'],['../classMatrix_1_1MyIterator.html#ad880a91d6a2d246cfafc47fb564974eb',1,'Matrix::MyIterator::MyIterator(const MyIterator &amp;other)']]]
 ];

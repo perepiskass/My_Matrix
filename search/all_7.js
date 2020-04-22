@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['test',['TEST',['../gtest_8cpp.html#aaafa2d21d5daaf860676d93acdd67b63',1,'TEST(version_test_case, version_test_patch):&#160;gtest.cpp'],['../gtest_8cpp.html#a41ce77f079de4fd8d4216cb57783b44c',1,'TEST(version_test_case, version_test_minor):&#160;gtest.cpp'],['../gtest_8cpp.html#a2e3bec3ef412f2d21aed3553acdec058',1,'TEST(version_test_case, version_test_major):&#160;gtest.cpp'],['../gtest_8cpp.html#aaca70af71391a93e3dbbeea3f7314c95',1,'TEST(matrix_test_case, add_element_test):&#160;gtest.cpp'],['../gtest_8cpp.html#ac21ffe127563ea0426ac642053ff83ad',1,'TEST(matrix_test_case, size_matrix_test):&#160;gtest.cpp'],['../gtest_8cpp.html#af66597b620ef93816067304c82e9fdfd',1,'TEST(matrix_test_case, operator_assign_test):&#160;gtest.cpp'],['../gtest_8cpp.html#a9bbcdbf94cbc27eee12cc93cc2a09a0e',1,'TEST(matrix_test_case, tupel_from_iterator_test):&#160;gtest.cpp'],['../gtest_8cpp.html#aeec520422ca64c253216fac7088dd13b',1,'TEST(matrix_test_case, ranged_based_for_test):&#160;gtest.cpp']]]
+  ['size',['size',['../classMatrix.html#a47d5be316cd3f2f381dcd9effeb7ad3c',1,'Matrix']]]
 ];
